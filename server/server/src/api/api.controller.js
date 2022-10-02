@@ -1,7 +1,8 @@
 const {
     registrUser,
     authUser,
-    createTask
+    createTask,
+    getLastTask
 } = require('./api.service')
 const express = require('express');
 const router = express.Router()
@@ -37,6 +38,18 @@ router.post("/tasks/getall", async (req, res) => {
     try {
 
         res.status(200).send()
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+})
+
+router.post("/tasks/getlast", async (req, res) => {
+    try {
+        const {
+            userid
+        } = req.body
+        const lastTask = await getLastTask(userid)
+        res.status(200).send(lastTask)
     } catch (error) {
         res.status(500).send(error.message)
     }
