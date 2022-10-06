@@ -36,9 +36,7 @@ const authUserDB = async (email, password) => {
         await client.query('BEGIN') 
 
         const searchUserSQL = `SELECT * FROM users where email = $1 and password = $2`
-        
         const searchUser = (await client.query(searchUserSQL, [email, password])).rows;
-        console.log(searchUser);
         if (!searchUser.length) throw new Error('Неправильная почта или пароль');
         await client.query('COMMIT')
         return searchUser
@@ -48,25 +46,42 @@ const authUserDB = async (email, password) => {
     }
 }
 
-const createTaskDB = async (taskText, taskNumber,taskOwner) => {
+const createTaskDB = async (taskText,taskOwner) => {
     const client = await pool.connect()
     try {
         await client.query('BEGIN')
 
         const sqlCreateTask = `
-        INSERT INTO tasks (taskNumber,taskText,taskOwner) 
-        VALUES ($1,$2,$3) RETURNING tasks.*
+        INSERT INTO tasks (task,owner_id) 
+        VALUES ($1,$2) RETURNING tasks.*
         `
-        const createdTask = (await client.query(sqlCreateTask, [taskNumber, taskText, taskOwner])).rows;
+        const createdTask = (await client.query(sqlCreateTask, [taskText, taskOwner])).rows;
 
         if (!createdTask.length) throw new Error('Некорректный ввод');
         await client.query('COMMIT')
         return createdTask
     } catch (error) {
-        console.log('error in UserCreateDB')
+        console.log('error in TaskCreateDB')
+        await client.query('ROLLBACK')
+    }
+}
+const getAllTasksDB = async (userid) => {
+    const client = await pool.connect()
+    try {
+        await client.query('BEGIN')
+
+        const getAllTasksSql = `
+        SELECT * FROM tasks where owner_id = $1`
+        const userAllTasks = (await client.query(getAllTasksSql, [userid])).rows;
+
+        if (!userAllTasks.length) throw new Error('Пользователь не имеет запланированных задач');
+        await client.query('COMMIT')
+
+        return userAllTasks
+    } catch (error) {
+        console.log(`Error in getAllTasksDB: ${error.message} by user: ${userid}`)
         await client.query('ROLLBACK')
     }
 }
 
-
-module.exports = {registrUserDB,authUserDB,createTaskDB}
+module.exports = {registrUserDB,authUserDB,createTaskDB,getAllTasksDB}

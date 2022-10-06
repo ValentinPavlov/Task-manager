@@ -2,8 +2,9 @@ const {
     registrUser,
     authUser,
     createTask,
-    getLastTask
+    getAllTasks
 } = require('./api.service')
+
 const express = require('express');
 const router = express.Router()
 
@@ -36,8 +37,13 @@ router.post("/user/auth", async (req, res) => {
 
 router.post("/tasks/getall", async (req, res) => {
     try {
+        const {
+            userid
+        } = req.body
+        console.log(userid);
+        const allTasks = await getAllTasks(userid)
+        res.status(200).send(allTasks)
 
-        res.status(200).send()
     } catch (error) {
         res.status(500).send(error.message)
     }
@@ -59,11 +65,10 @@ router.post("/tasks/create", async (req, res) => {
     try {
         const {
             taskText,
-            taskNumber,
             taskOwner
         } = req.body
-        const createdTask = await createTask(taskText, taskNumber, taskOwner)
-        res.status(200).send("task created success")
+        const createdTask = await createTask(taskText, taskOwner)
+        res.status(200).send(`task created success`)
     } catch (error) {
         res.status(500).send(error.message)
     }
@@ -72,10 +77,11 @@ router.post("/tasks/create", async (req, res) => {
 router.post("/tasks/delete", async (req, res) => {
     try {
         const {
+            userid,
             taskNumber,
         } = req.body
-        const createdTask = await createTask(taskText, taskNumber, taskOwner)
-        res.status(200).send("task created success")
+        const createdTask = await createTask(userid)
+        res.status(200).send("task deleted success")
     } catch (error) {
         res.status(500).send(error.message)
     }
