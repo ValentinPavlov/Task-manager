@@ -1,0 +1,50 @@
+.LoginBar-wrap {
+    width: 573px;
+    height: 458px;
+}
+
+.welcomeText {
+    width: 436px;
+    height: 84px;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 84px;
+    color: #000000;
+}
+
+input {
+    box-sizing: border-box;
+    width: 573px;
+    height: 77px;
+    background: #FFFFFF;
+    border: 2px solid rgba(74, 74, 74, 0.2);
+    border-radius: 10px;
+}
+
+.continue-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 573px;
+    height: 77px;
+    background: #31C2E4;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    padding-left: 31px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(74, 74, 74, 0.3);
+}
+
+.continueText {
+    width: 99px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}

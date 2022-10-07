@@ -1,0 +1,14 @@
+.content {
+    display: flex;
+    margin-top: 48px;
+}
+
+
+.Background{
+margin-left: 143px;
+width: 1061px;
+height: 780px;
+background-image: url(./assets/loginbackgr.svg);
+background-repeat: no-repeat;
+background-size: contain;
+}

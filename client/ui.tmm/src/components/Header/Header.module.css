@@ -1,0 +1,111 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 82px;
+    width: 226px;
+    height: 84px;
+    font-weight: 600;
+    font-size: 56px;
+    letter-spacing: -0.01em;
+    color: #31C2E4;
+}
+
+.name-p {
+    color: green;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 61px;
+    width: 890px;
+}
+
+.nightmode {
+    background-image: url(./assets/nightmode.svg);
+    width: 120px;
+    height: 49.9px;
+    background-size: cover;
+}
+
+.contact {
+    width: 102px;
+    height: 36px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.03em;
+
+    color: rgba(74, 74, 74, 0.72);
+}
+.globe-language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 57px;
+}
+
+.globe {
+    background-image: url(./assets/globe.svg);
+    width: 17px;
+    height: 17px;
+    background-size: contain;
+}
+
+.language {
+    width: 29px;
+    height: 36px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.03em;
+    color: rgba(74, 74, 74, 0.72);
+}
+
+.signup-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 181px;
+    height: 44px;
+    background: #31C2E4;
+    border-radius: 13.0536px;
+}
+
+.sign-text {
+    width: 85px;
+    height: 33px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 181px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 2px solid #31C2E4;
+    border-radius: 13.0536px
+}
+
+.login-text {
+    width: 60px;
+    height: 33px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    color: #31C2E4;
+}

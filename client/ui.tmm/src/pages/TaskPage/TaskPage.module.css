@@ -1,0 +1,37 @@
+
+.TaskPage {
+    display: flex;
+}
+.content {
+    z-index: 1;
+    width: 1800px;
+    display: flex;
+}
+
+/* .SideMenu-wrap {
+    padding-top: 55px;
+} */
+
+.TaskCounter-wrap {
+    padding-left: 51px;
+    padding-top: 55px;
+}
+
+.ToDo-wrap {
+    z-index: 2;
+    padding-left: 113px;
+    padding-top: 55px;
+}
+
+.TaskTable-wrap {
+    z-index: 2;
+    padding-left: 161px;
+    padding-top: 55px;
+}
+
+.right-background {
+    z-index: -1;
+    width: 778px;
+    height: 1085px;
+    background: linear-gradient(92.09deg, #FFFFFF 0%, #E8FBFF 50%, #D8F7FF 100%);
+}

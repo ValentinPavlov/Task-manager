@@ -1,0 +1,20 @@
+.content{
+    display: flex;
+    padding-left: 115px;
+    padding-right: 28px;
+}
+
+.registerBar-wrap{
+    margin-top: 59px;
+}
+
+.right-image{
+    margin-top: 176px;
+    margin-left: 143px;
+    background-image: url(./assets/slide1.svg);
+    width: 1061px;
+height: 780px;
+background-size: contain;
+background-repeat: no-repeat;
+}
+

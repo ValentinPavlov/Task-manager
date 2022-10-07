@@ -1,0 +1,63 @@
+.taskCounter-content {
+    height: 360px;
+    width: 186px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.taskmanager-text {
+    width: 182px;
+    height: 36px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.taskmanager-description {
+    width: 181px;
+    height: 82px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: rgba(74, 74, 74, 0.45);
+}
+
+.taskCounter-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 186px;
+    height: 181px;
+    background: linear-gradient(39.54deg, #31C2E4 0%, #99DAEA 97.99%);
+    box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+}
+
+.taskCounter-date-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 125px;
+    width: 186px;
+    padding-left: 30px;
+}
+
+.taskCounter-date{
+    width: 34px;
+    height: 34px;
+    background-size: contain;
+background-image: url(./assets/calendar.svg);
+}
+
+.taskCounter-count {
+width: 38px;
+height: 60px;
+font-weight: 500;
+font-size: 40px;
+line-height: 60px;
+color: #FFFFFF;
+}

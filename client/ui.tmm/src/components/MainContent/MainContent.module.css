@@ -1,0 +1,74 @@
+.main-content {
+    position: relative;
+}
+
+.starttext {
+    margin-top: 137px;
+    padding-left: 82px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 454px;
+
+}
+
+.maintext {
+    width: 628px;
+    height: 178px;
+    left: 82px;
+    top: 252px;
+    font-weight: 600;
+    font-size: 59.3628px;
+    line-height: 89px;
+    color: #24252C;
+}
+
+.description {
+    width: 588px;
+    height: 84px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 42px;
+    color: #6E6A7C;
+}
+
+.start-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 573px;
+    height: 77px;
+    background: #31C2E4;
+    border-radius: 34.6283px;
+}
+
+.start-button-text {
+    width: 145px;
+    height: 35px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.wave-image {
+    background-image: url(./assets/wave.svg);
+    background-repeat: no-repeat;
+    width: 1440px;
+    height: 288px;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.backright-image {
+    background-image: url(./assets/studygirl.svg);
+    width: 851px;
+    height: 815px;
+    position: absolute;
+    background-size: contain;
+    z-index: 1;
+    left: 847px;
+    top: -127px;
+}

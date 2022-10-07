@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+}
+
+.ToDo-content {
+    width: 576px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-block {
+    height: 113px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+p {
+    width: 72px;
+    height: 23px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: rgba(74, 74, 74, 0.45);
+}
+
+.ToDo-head-text {
+    width: 72px;
+    height: 36px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+
+
+.create-delete-input {
+    padding-left: 31px;
+    width: 573px;
+    height: 77px;
+    background: #FFFFFF;
+    border: 2px solid rgba(74, 74, 74, 0.2);
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: rgba(74, 74, 74, 0.3);
+}
+
+.update-inputs {
+    display: flex;
+    width: 609px;
+    justify-content: space-between;
+}
+
+.update-input {
+    padding-left: 31px;
+    width: 251px;
+    height: 77px;
+    background: #FFFFFF;
+    border: 2px solid rgba(74, 74, 74, 0.2);
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: rgba(74, 74, 74, 0.3);
+}
+
+.save-button {
+    width: 206px;
+    height: 45px;
+    background: #31C2E4;
+    border-radius: 10px;
+}
+
+.save-button-text {
+    margin: auto;
+    margin-top: 5%;
+    width: 50px;
+    height: 21px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+}
