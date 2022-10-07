@@ -65,10 +65,11 @@ router.post("/tasks/create", async (req, res) => {
     try {
         const {
             taskText,
-            taskOwner
+            userid
         } = req.body
-        const createdTask = await createTask(taskText, taskOwner)
-        res.status(200).send(`task created success`)
+        console.log(taskText,userid);
+        const createdTask = await createTask(taskText,userid)
+        res.status(200).send(createdTask)
     } catch (error) {
         res.status(500).send(error.message)
     }

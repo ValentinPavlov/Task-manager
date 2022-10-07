@@ -46,7 +46,7 @@ const authUserDB = async (email, password) => {
     }
 }
 
-const createTaskDB = async (taskText,taskOwner) => {
+const createTaskDB = async (taskText,userid) => {
     const client = await pool.connect()
     try {
         await client.query('BEGIN')
@@ -55,7 +55,7 @@ const createTaskDB = async (taskText,taskOwner) => {
         INSERT INTO tasks (task,owner_id) 
         VALUES ($1,$2) RETURNING tasks.*
         `
-        const createdTask = (await client.query(sqlCreateTask, [taskText, taskOwner])).rows;
+        const createdTask = (await client.query(sqlCreateTask, [taskText, userid])).rows;
 
         if (!createdTask.length) throw new Error('Некорректный ввод');
         await client.query('COMMIT')

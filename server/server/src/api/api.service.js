@@ -13,8 +13,8 @@ const getAllTasks = async (userid) => {
     return AllTasksDB
 }
 
-const createTask = async (taskText,taskOwner) => {
-    const createdTaskDB = await createTaskDB(taskText,taskOwner)
+const createTask = async (taskText,userid) => {
+    const createdTaskDB = await createTaskDB(taskText,userid)
     return createdTaskDB
 }
 
