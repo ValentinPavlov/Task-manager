@@ -18,8 +18,8 @@ const checkTypeData = (name, mail, pass, confirm) => {
 
 regstr_btn.addEventListener('click', async () => {
     const name_in = document.querySelector('.input.username').value
-    const mail_in = document.querySelector('.email').value
     const pass_in = document.querySelector('.pass').value
+    const mail_in = document.querySelector('.email').value
     const confirm = document.querySelector('.pass_conf').value
 
     const inputStatus = checkTypeData(name_in, mail_in, pass_in, confirm)
